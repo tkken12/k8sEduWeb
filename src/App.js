@@ -1,26 +1,37 @@
-import { Router, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom"
+import routePath from "route/routPath"
+import "assets/css/layout.css"
 import "./App.css"
-import routePath from "route/routPath";
+import Sidebar from "component/sidebar/sidebar"
+import Navbar from "component/navbar/navbar"
+import Footer from "component/footer/footer"
 
 const getRoutes = () => { 
-  routePath.map( route => {
-    if ( !!route["route"] !== false ) {
+  return routePath.map( route => {
+    if ( !!route["path"] !== false ) {
       return (
-        <Route exact path={route["route"]} component={ route["component"]} key={route["key"]} />
+        <Route 
+          exact path = { route["path"]      }
+          component  = { route["component"] }
+          key        = { route["key"]       } 
+        />
       )
     } 
-      return null
-    
   })
 }
 
 const App = () => {
   return (
-    <Router>
+    <div className="layout">
+      <Navbar /> 
+      <Sidebar />
       <Switch>
-        { getRoutes() }
+          { getRoutes() }
       </Switch>
-    </Router>
+      <Footer />
+      
+    </div>
+
   )
 }
 
