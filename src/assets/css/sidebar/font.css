@@ -1,0 +1,20 @@
+.sidebar{
+    color: white;
+    flex-direction: column;
+    display: flex;
+    background-color: #dadada;
+
+}
+
+.sidebarMenu{
+    border: 1px solid gray;
+}
+
+.sidebarMenu:hover{
+    background-color: #e4eaf5;
+}
+
+.submenuFont > a {
+    text-decoration: none;
+    color: inherit;
+}

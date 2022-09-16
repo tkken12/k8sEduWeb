@@ -1,11 +1,17 @@
 import React from "react";
+import "views/podInfo/podInfoBody.css"
 
 const PodInfo = () => { 
 
     return(
         <>
-            podInfo
+            <div className="podInfoBody">
+            </div>
+            <div>
+
+            </div>
         </>
+       
     )
 }
 

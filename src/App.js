@@ -8,14 +8,16 @@ import Footer from "component/footer/footer"
 
 const getRoutes = () => { 
   return routePath.map( route => {
-    if ( !!route["path"] !== false ) {
-      return (
-        <Route 
-          exact path = { route["path"]      }
-          component  = { route["component"] }
-          key        = { route["key"]       } 
-        />
-      )
+    if ( !!route["path"] !== false  ) {
+      if( route["component"] !== false ) {
+        return (
+          <Route 
+            exact path = { route["path"]      }
+            component  = { route["component"] }
+            key        = { route["key"]       } 
+          />
+        )
+      }
     } 
   })
 }
@@ -26,7 +28,9 @@ const App = () => {
       <Navbar /> 
       <Sidebar />
       <Switch>
+        <div className="main-layout">
           { getRoutes() }
+        </div>
       </Switch>
       <Footer />
       
