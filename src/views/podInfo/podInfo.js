@@ -1,13 +1,27 @@
+import { K8S_EDU_CONST } from "common/constant";
+import requestHandler from "component/apiCaller/axios";
 import TableBody from "component/table/tableBody";
 import { TableColumns } from "component/table/tableStyle";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "views/podInfo/podInfoBody.css"
+import dotenv from "dotenv"
 
 const PodInfo = () => { 
 
+    dotenv.config()
     const [ podInfo, setPodInfo ] = useState([])
 
-    console.log(TableColumns )
+    useEffect(() => {
+        requestHandler({
+            "method": K8S_EDU_CONST["REQUEST"]["METHOD"]["GET"],
+            "reqPath": K8S_EDU_CONST["REQUEST"]["PATH"]["GET"]["API"]["V1"]["POD"]["LIST"],
+            "query": ""
+        }).then( res => { setPodInfo(res.data) })
+        .catch( err => {
+            console.log(err)
+        })
+    }, [])
+
     return(
         <>
             <div className="podInfoBody">
