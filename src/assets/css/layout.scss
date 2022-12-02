@@ -1,3 +1,5 @@
+@import "assets/css/_variables.scss";
+
 .layout {
     background-color: #f3f6f4;
     width: 100%;
@@ -26,16 +28,16 @@
 
 .main-layout {
     grid-area: main;
-    border: 1px solid gray;
-    background-color: #ebebeb;
+    height: $main-layout-height;
 }
 
 .navbar-layout {
-    border: 1px solid gray;
     grid-area: nav;
+    background-color: #ebebeb;
+    height: $navbar-layout-height;
 }
 
 .footer-layout {
     grid-area: footer;
-    border: 1px solid gray;
+    height: $footer-layout-height;
 }

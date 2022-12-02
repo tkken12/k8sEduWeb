@@ -1,0 +1,11 @@
+//main layout
+$navbar-layout-height: 7vh;
+$footer-layout-height: 3vh;
+$main-layout-height: calc( 100vh - $navbar-layout-height - $footer-layout-height);
+
+//dashboard layout
+$dashboard-grid-padding: 1rem;
+$dashboard-area-height: 100%;
+
+//dashboard cluster layout
+$cluster-grid-padding: 1rem;

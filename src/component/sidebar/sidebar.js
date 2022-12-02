@@ -1,5 +1,5 @@
-import "assets/css/layout.css"
-import "assets/css/sidebar/logo.css"
+import "assets/css/layout.scss"
+import "assets/css/sidebar/logo.scss"
 import Logo from "./sidebarLogo"
 import SidebarMenu from "./sidebarMenu"
 

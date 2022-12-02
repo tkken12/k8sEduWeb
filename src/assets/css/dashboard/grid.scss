@@ -1,0 +1,72 @@
+@import "assets/css/_variables.scss";
+
+.dashboard-grid {
+    display: grid;
+    grid-template-areas: 
+        "cluster node pod";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100%; 
+    height: 100%;
+}
+
+.dashboard-area-cluster {
+    grid-area: cluster;
+    padding: $dashboard-grid-padding;
+}
+
+.dashboard-area-node {
+    grid-area: node;
+    padding: $dashboard-grid-padding;
+}
+
+.dashboard-area-pod {
+    grid-area: pod;
+    padding: $dashboard-grid-padding;
+}
+
+.dashboard-area-height {
+    height: $dashboard-area-height;
+}
+
+.cluster-grid-layout {
+    display: grid;
+    grid-template-areas: 
+    "card"
+    "table";
+    grid-template-rows: 1fr 1fr;
+    height: $dashboard-area-height;
+    grid-gap: 10px;
+}
+
+.cluster-area-card {
+    grid-area: card;
+    padding: $cluster-grid-padding;
+    height: 100%;
+}
+
+.cluster-card-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+
+// .cluster-card-area-left {
+//     grid-area: left;
+//     padding: $cluster-grid-padding;
+// }
+// .cluster-card-area-center {
+//     grid-area: center;
+//     padding: $cluster-grid-padding;
+// }
+// .cluster-card-area-right {
+//     grid-area: right;
+//     padding: $cluster-grid-padding;
+// }
+
+.cluster-area-table{
+    grid-area: table;
+    padding: $cluster-grid-padding;
+
+}

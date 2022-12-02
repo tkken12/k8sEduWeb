@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import "assets/css/sidebar/font.css"
+import "assets/css/sidebar/font.scss"
 import routePath from "route/routPath"
 import { Link } from "react-router-dom"
 

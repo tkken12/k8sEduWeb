@@ -1,5 +1,5 @@
-import "assets/css/layout.css"
-import "assets/css/navBar/navBarContainer.css"
+import "assets/css/layout.scss"
+import "assets/css/navBar/navBarContainer.scss"
 import SearchBar from "./searchBar"
 
 const Navbar = ( props ) => { 

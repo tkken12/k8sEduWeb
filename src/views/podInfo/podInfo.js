@@ -1,9 +1,9 @@
 import { K8S_EDU_CONST } from "common/constant";
 import requestHandler from "component/apiCaller/axios";
-import TableBody from "component/table/tableBody";
-import { TableColumns } from "component/table/tableStyle";
+// import TableBody from "component/table/tableBody_deprecated";
+// import { TableColumns } from "component/table/tableStyle_deprecated";
 import React, { useState, useEffect } from "react";
-import "views/podInfo/podInfoBody.css"
+import "views/podInfo/podInfoBody.scss"
 import dotenv from "dotenv"
 
 const PodInfo = () => { 
@@ -25,11 +25,11 @@ const PodInfo = () => {
     return(
         <>
             <div className="podInfoBody">
-                <TableBody
+                {/* <TableBody
                     data = { podInfo }
                     columns = { TableColumns() }
                 />
-
+ */}
             </div>
             <div>
 

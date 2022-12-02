@@ -1,5 +1,5 @@
 import { TextField } from "@mui/material" 
-import "assets/css/navBar/searchBar.css"
+import "assets/css/navBar/searchBar.scss"
 
 const SearchBar = () => {
     return (
