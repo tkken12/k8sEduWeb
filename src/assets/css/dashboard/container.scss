@@ -1,11 +1,10 @@
 .body-container {
     padding-top: 1%;
     display: grid;
-    // grid-template-rows: 1fr 4fr;
     grid-template-areas: 
     "header"
     "content";
-    grid-row-gap: 10%;
+    grid-row-gap: 1%;
 }
 
 .body-area-header{
@@ -24,4 +23,22 @@
     grid-template-columns: 1fr 4fr;
     padding-left: 1rem;
     padding-right: 1rem;
+}
+
+.condition-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.condition-item {
+    width: 30%;
+    margin-bottom: 15px;
+}
+
+.condition-header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 15pt;
 }

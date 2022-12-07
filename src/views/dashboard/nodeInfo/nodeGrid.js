@@ -7,7 +7,6 @@ const NodeGrid = props => {
 
     let exampleData = [
         {"nodeName": "m1", "utilization": 10}, {"nodeName": "m2", "utilization": 50}, {"nodeName": "m3", "utilization": 70},
-        {"nodeName": "m1", "utilization": 10}, {"nodeName": "m2", "utilization": 50}, {"nodeName": "m3", "utilization": 70},
     ]
 
     let contentBodyObj = [

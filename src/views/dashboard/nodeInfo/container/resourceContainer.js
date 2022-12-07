@@ -4,7 +4,7 @@ import "assets/css/dashboard/container.scss"
 const ResourceContainer = props => {
     return (
         <div className="resource-container">
-            <div> {props.nodeName} </div>
+            <div style={{textAlign: "center"}}> {props.nodeName} </div>
             <MakeGauge 
                 utilization={props.utilization}
             />
