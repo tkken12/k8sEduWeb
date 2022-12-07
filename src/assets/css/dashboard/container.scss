@@ -1,0 +1,27 @@
+.body-container {
+    padding-top: 1%;
+    display: grid;
+    // grid-template-rows: 1fr 4fr;
+    grid-template-areas: 
+    "header"
+    "content";
+    grid-row-gap: 10%;
+}
+
+.body-area-header{
+    text-align: center;
+    font-weight: bold;
+    grid-area: header;
+}
+
+.body-area-content {
+    grid-area: content;
+    overflow-y: scroll;
+}
+
+.resource-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}

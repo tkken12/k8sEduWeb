@@ -1,0 +1,16 @@
+import MakeGauge from "component/resourceGauge.js/makeGauge"
+import "assets/css/dashboard/container.scss"
+
+const ResourceContainer = props => {
+    return (
+        <div className="resource-container">
+            <div> {props.nodeName} </div>
+            <MakeGauge 
+                utilization={props.utilization}
+            />
+        </div>
+
+    )
+}
+
+export default ResourceContainer

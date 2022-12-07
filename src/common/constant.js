@@ -17,8 +17,15 @@ const K8S_EDU_CONST = {
                 }
             }
         }
-    }
+    },
 
+    COMPONENT: {
+        GAUGE: {
+            LOOSE: 30, 
+            NORMAL: 50,
+            TIGHT: 70
+        }
+    }
 }
 
 export { 

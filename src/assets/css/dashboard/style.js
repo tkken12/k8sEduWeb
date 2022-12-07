@@ -3,7 +3,7 @@
 const DASHBOARD_STYLE = {
     MUI: {
         CARD: {
-            DEFAULT_STYLE: { height: "100%", padding: "0px" },
+            DEFAULT_STYLE: { height: "100%", padding: "0px", maxHegiht: "100%" },
             GRID_AREA: {
                 HEIGHT: "100%",
                 BACKGROUND_COLOR: "#d9e1e8",

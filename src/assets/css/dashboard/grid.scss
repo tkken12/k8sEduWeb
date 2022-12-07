@@ -70,3 +70,29 @@
     padding: $cluster-grid-padding;
 
 }
+
+.node-grid-layout {
+    display: grid;
+    grid-template-areas: 
+    "cpu"
+    "memory"
+    "disk"
+    "condition";
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: $dashboard-area-height;
+    grid-gap: 10px;
+    padding: 1rem
+}
+
+.node-area-cpu {
+    grid-area: cpu;
+}
+.node-area-memory {
+    grid-area: memory;
+}
+.node-area-disk {
+    grid-area: disk;
+}
+.node-area-condition {
+    grid-area: condition;
+}
