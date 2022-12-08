@@ -9,14 +9,12 @@
                             "side nav nav"
                             "side main main"
                             "footer footer footer" ;
-    /*grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); */ 
     grid-template-rows: 7% 90% 3%;
-    grid-template-columns: 12%;
+    grid-template-columns: 1fr 5fr 5fr;
 }
 
 .sidebar-layout {
     background-color: #161948;
-    border: 1px solid gray;
     grid-area: side;
 }
 

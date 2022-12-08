@@ -6,10 +6,10 @@ const Navbar = ( props ) => {
     return (
         <div className="navbar-layout">
             <div className="navBarContainer">
-                <SearchBar />
+                {/* <SearchBar /> */}
                 
                 <div style={{ "width": "50%", textAlign: "right" }} > {/* temporary */}
-                    logout
+                    {/* logout */}
                 </div>
             </div>
         </div>

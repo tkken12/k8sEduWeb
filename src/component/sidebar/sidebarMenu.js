@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import "assets/css/sidebar/font.scss"
 import routePath from "route/routPath"
 import { Link } from "react-router-dom"
+import { useHistory } from "react-router-dom/cjs/react-router-dom"
 
 const SidebarMenu = () => { 
 
@@ -9,15 +10,17 @@ const SidebarMenu = () => {
     const [ activeSubmenu, setActiveSubmenu ] = useState("")
     const activeHandler = e => { setActiveMenu(e.target.id) }
     const activeSubmenuHandler = e => { setActiveSubmenu(e.target.id) }
+    const history = useHistory()
 
     return (
         routePath.map( route => (
-            showMenus( route, activeMenu, activeSubmenu, activeHandler, activeSubmenuHandler )
+            showMenus( route, activeMenu, activeSubmenu, activeHandler, activeSubmenuHandler, history )
         ))
     )
 }
 
-const showMenus = ( route, activeMenu, activeSubmenu, activeHandler, activeSubmenuHandler ) => { 
+const showMenus = ( route, activeMenu, activeSubmenu, activeHandler, activeSubmenuHandler, history ) => { 
+    if(activeMenu === "dashboard") { history.push("/") }
     if( route["type"] === "menu" ) {
         return (
             <div id={ route["key"] } className="sidebar" onClick={ activeHandler } >
