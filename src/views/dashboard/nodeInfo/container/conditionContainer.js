@@ -3,12 +3,12 @@ import { Card, CardContent, CardHeader, Typography } from "@mui/material"
 const ConditionContainer = props => {
 
     let conditionBodyOjb = [
-        {"headerName": "정상 가동률", "data": ""},
-        {"headerName": "MemoryPresure", "data": ""},
-        {"headerName": "PIDPresure", "data": ""},
-        {"headerName": "DiskPresure", "data": ""},
-        {"headerName": "Condition", "data": ""},
-        {"headerName": "NetworkUnavailable", "data": ""},
+        {"headerName": "정상 가동률", "data": "100%"},
+        {"headerName": "MemoryPresure", "data": "N/A"},
+        {"headerName": "PIDPresure", "data": "N/A"},
+        {"headerName": "DiskPresure", "data": "N/A"},
+        {"headerName": "Condition", "data": "N/A"},
+        {"headerName": "NetworkUnavailable", "data": "N/A"},
     ]
 
     return (
@@ -22,7 +22,9 @@ const ConditionContainer = props => {
                         component={Typography}
                         title={body["headerName"]}
                     />
-                    <CardContent>
+                    <CardContent
+                        sx={{ textAlign:"center"}}
+                    >
                         <div> { body["data"]} </div>
                     </CardContent>
                 </Card>

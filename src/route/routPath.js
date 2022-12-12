@@ -18,7 +18,6 @@ const routePath = [
         "name"     : "워크로드",
         "type"     : "menu", 
         "subMenus"  : [ { "name": "Pod 정보", "path": "/workloads/podInfo" },
-                        { "name": "Deployment 정보", "path": "/workloads/deploymentInfo" }
                       ]
     },
     {

@@ -14,9 +14,9 @@ const Dashboard = () => {
             <div className="dashboard-area-node" >
                 <NodeInfoBody /> 
             </div>
-            <div className="dashboard-area-pod">
+            {/* <div className="dashboard-area-pod">
                 <DashboardPodInfo />
-            </div>
+            </div> */}
         </div>
 
     )

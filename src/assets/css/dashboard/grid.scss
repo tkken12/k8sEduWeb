@@ -2,9 +2,12 @@
 
 .dashboard-grid {
     display: grid;
+    // grid-template-areas: 
+        // "cluster node pod";
     grid-template-areas: 
-        "cluster node pod";
-    grid-template-columns: 1fr 1fr 1fr;
+        "cluster node";
+    // grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
     grid-template-rows: 100%; 
     height: 100%;
 }
