@@ -21,7 +21,7 @@ const useInterval = (callback, delay) => {
         }
         if (delay !== null) {
             let id = setInterval(tick, delay);
-            return () => clearInterval(id);
+            return () => clearInterval(id)
         }
     }, [delay]);
 }
@@ -50,8 +50,30 @@ const convertUnit = (unit, cond) => {
 
         default: return unit
     } 
+}
 
+const gridCreateEmptyRow = ( row, cycle, idNum ) => {
 
+    console.log( cycle)
+    let tmpRow = row
+    let emptyRows = []
+    let keys = Object.keys(tmpRow)
+
+    for( let i=0; i < cycle; i++ ) {
+        emptyRows.push(tmpRow)
+    }
+
+    emptyRows.forEach( (elem, idx) => {
+        keys.forEach( key => {
+            if( key === "id" ) {
+                !!idNum !== true ? elem["id"] += idx + 1 : elem["id"] = idNum; idNum++
+            } else {
+                elem[key] = ""
+            }
+        })
+    })
+
+    return emptyRows 
 }
 
 export {
@@ -60,4 +82,5 @@ export {
     giToTi,
     checkIsValidUnit,
     convertUnit,
+    gridCreateEmptyRow
 }

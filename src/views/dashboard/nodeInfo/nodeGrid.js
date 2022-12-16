@@ -2,9 +2,11 @@ import ResourceContainer from "views/dashboard/nodeInfo/container/resourceContai
 import ConditionContainer from "views/dashboard/nodeInfo/container/conditionContainer"
 import { Card, CardContent } from "@mui/material"
 import { DASHBOARD_STYLE } from "assets/css/dashboard/style"
+import { useStore } from "component/global/zustand"
 
 const NodeGrid = props => {
 
+    const { dashboardInfo } = useStore()
     let exampleData = [
         {"nodeName": "m1", "utilization": 10}, {"nodeName": "m2", "utilization": 50}, {"nodeName": "m3", "utilization": 70},
     ]
