@@ -10,7 +10,6 @@ const ClusterCardInfo = props => {
     ] 
     return (
         <div className="cluster-card-container">
-            
             { clusterInfoObject.map( obj => (
                 <Card sx={DASHBOARD_STYLE["MUI"]["CARD"]["DEFAULT_STYLE"]}>
                     <CardHeader 

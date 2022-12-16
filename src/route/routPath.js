@@ -17,7 +17,7 @@ const routePath = [
         "key"      : "workloads",
         "name"     : "워크로드",
         "type"     : "menu", 
-        "subMenus"  : [ { "name": "Pod 정보", "path": "/workloads/podInfo" },
+        "subMenus"  : [ { "name": "Pod 정보", "path": "/workloads/podInfo", "key": "podInfo" },
                       ]
     },
     {
@@ -34,7 +34,7 @@ const routePath = [
         "name"      : "모니터링",
         "type"      : "menu",
         "subMenus"  : [
-                        {"name": "Node 모니터링", "path": "/monitoring/node" }
+                        {"name": "Node 모니터링", "path": "/monitoring/node", "key": "nodeMonitoring" }
                       ] 
     }, 
     {

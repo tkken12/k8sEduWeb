@@ -25,10 +25,10 @@ const showMenus = ( route, activeMenu, activeSubmenu, activeHandler, activeSubme
         return (
             <div id={ route["key"] } className="sidebar" onClick={ activeHandler } >
                 { route["name"] }
-                <ul className="submenuFont">
-                    { route["subMenus"].map( subMenu => ( 
-                        <Link to={ subMenu["path"] }>
-                            <li 
+                <ul id={ route["key"] } className="submenuFont">
+                    { route["subMenus"].map( (subMenu,idx) => ( 
+                        <Link id={ "submenu" + idx } to={ subMenu["path"] }>
+                            <li id={subMenu["key"]} 
                                 style={ activeMenu !== route["key"] ? 
                                         { display: "none" } 
                                         :
