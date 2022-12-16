@@ -1,7 +1,7 @@
 import create from "zustand";
 
 const useStore = create( (set) => ({
-    dashboardInfo: {},
+    dashboardInfo: { code: "", message: { total:{}, tableInfo:{}, utilization:{} } },
     setDashboardInfo: (value) => set({ dashboardInfo: value }),
 
     nodeInfo: {},

@@ -2,13 +2,15 @@ import { checkIsValidUnit, convertUnit, giToTi, utilConst } from "common/util"
 
 const totalMaker = data => {
 
+    console.log( data )
+
     let body = [
         { key: "nodeTotal",   headerName: "Node Total"  , total: 0, unit : "" }, { key: "masterTotal", headerName: "Master Total", total: 0, "unit": "" },
         { key: "workerTotal", headerName: "Worker Total", total: 0, unit : "" }, { key: "podTotal",    headerName: "Pod Total",    total: 0, "unit": "" }, 
         { key: "cpuTotal",    headerName: "CPU Total"   , total: 0, unit : "core" }, { key: "memoryTotal", headerName: "Memory Total", total: 0, "unit": utilConst["UNIT_GI"] }
     ] 
 
-    if ( typeof(data) !== "object") {
+    if ( typeof(data) !== "object" || Object.keys(data).length === 0 ) {
         return body
     } 
 

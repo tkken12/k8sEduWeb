@@ -22,7 +22,7 @@ const Dashboard = () => {
         ).then( res => {
             setDashboardInfo(res.data)
         }).catch(err => {
-            setDashboardInfo({})
+            setDashboardInfo({ code: "", message: { total:{}, tableInfo:{}, utilization:{} } })
         })
     }
     

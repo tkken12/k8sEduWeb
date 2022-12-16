@@ -6,10 +6,9 @@ import { useStore } from "component/global/zustand"
 const ClusterCardInfo = () => {
 
     const { dashboardInfo } = useStore() 
-    
     return (
         <div className="cluster-card-container">
-            { totalMaker(dashboardInfo["message"]).map( obj => (
+            { totalMaker(dashboardInfo["message"]["total"]).map( obj => (
                 <Card sx={DASHBOARD_STYLE["MUI"]["CARD"]["DEFAULT_STYLE"]}>
                     <CardHeader 
                         titleTypographyProps={{variant: "h8"}}
