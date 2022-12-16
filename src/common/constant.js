@@ -1,5 +1,6 @@
 const K8S_EDU_CONST = { 
     REQUEST: {
+        INTERVAL: 5000, // milsec
         METHOD: {
             GET   : "get",
             POST  : "post",

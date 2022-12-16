@@ -1,17 +1,18 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "assets/css/layout.scss"
 import "assets/css/dashboard/grid.scss"
 import NodeInfoBody from "views/dashboard/nodeInfo/nodeInfoBody";
 import ClusterInfoBody from "views/dashboard/clusterInfo/clusterInfoBody";
-import DashboardPodInfo from "./podInfo/dashboardPodInfo";
+// import DashboardPodInfo from "./podInfo/dashboardPodInfo";
 import requestHandler from "component/apiCaller/axios";
 import { K8S_EDU_CONST } from "common/constant";
 import { useInterval } from "common/util";
 import { useEffect } from "react";
+import { useStore } from "component/global/zustand";
 
 const Dashboard = () => { 
 
-    const [dashboardInfo, setDashboardInfo] = useState([])
+    const { setDashboardInfo } = useStore()
     const getDashboardInfo = () => {
         requestHandler(
             { "method": K8S_EDU_CONST["REQUEST"]["METHOD"]["GET"],
@@ -20,16 +21,16 @@ const Dashboard = () => {
             }
         ).then( res => {
             setDashboardInfo(res.data)
-        }).catch(
-            setDashboardInfo([])
-        )
+        }).catch(err => {
+            setDashboardInfo({})
+        })
     }
     
-    useEffect(() => {
+    useEffect( () => {
         getDashboardInfo()
     }, [])
     
-    useInterval( getDashboardInfo, 5000 )
+    useInterval( getDashboardInfo, K8S_EDU_CONST["REQUEST"]["INTERVAL"])
 
     return (
         <div className="dashboard-grid">
