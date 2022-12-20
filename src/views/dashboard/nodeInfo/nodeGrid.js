@@ -7,14 +7,30 @@ import { useStore } from "component/global/zustand"
 const NodeGrid = props => {
 
     const { dashboardInfo } = useStore()
-    let exampleData = [
-        {"nodeName": "m1", "utilization": 10}, {"nodeName": "m2", "utilization": 50}, {"nodeName": "m3", "utilization": 70},
-    ]
+    const utilizations = id => {
+        if( !!dashboardInfo["message"]["nodeInfo"] !== false ) {
+            return (
+                dashboardInfo["message"]["nodeInfo"]["nodeResource"][id].map( resource => (
+                    <ResourceContainer 
+                        nodeName={ resource.nodeName }
+                        utilization={ resource.utilization}
+                    />
+                ))
+            )
+        } else {
+            return (
+                <ResourceContainer 
+                    nodeName={""}
+                    utilization={0}
+                />
+            )
+        }
+    }
 
     let contentBodyObj = [
-        {"className": "node-area-cpu", "headerName": "CPU 사용률"},
-        {"className": "node-area-memory", "headerName": "Memory 사용률"},
-        {"className": "node-area-disk", "headerName": "Disk 사용률"},
+        {"id": "nodeCpuUtilization", "className": "node-area-cpu", "headerName": "CPU 사용률"},
+        {"id": "nodeMemoryUtilization", "className": "node-area-memory", "headerName": "Memory 사용률"},
+        {"id": "nodeDiskIO", "className": "node-area-disk", "headerName": "Disk 사용률"},
     ]
 
     return(
@@ -26,12 +42,7 @@ const NodeGrid = props => {
                             <div className="body-container">
                                 <div className="body-area-header">{ obj["headerName"] }</div>
                                 <div className="body-area-content">
-                                    { exampleData.map( data => (
-                                        <ResourceContainer 
-                                            nodeName={ data.nodeName }
-                                            utilization = {data.utilization}
-                                        />
-                                    ))}
+                                    { utilizations(obj["id"]) }
                                 </div>
                             </div>
                         </CardContent>

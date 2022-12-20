@@ -3,8 +3,8 @@ import { checkIsValidUnit, convertUnit, giToTi, gridCreateEmptyRow, utilConst } 
 const totalMaker = data => {
 
     let body = [
-        { key: "nodeTotal",   headerName: "Node Total"  , total: 0, unit : "" }, { key: "masterTotal", headerName: "Master Total", total: 0, "unit": "" },
-        { key: "workerTotal", headerName: "Worker Total", total: 0, unit : "" }, { key: "podTotal",    headerName: "Pod Total",    total: 0, "unit": "" }, 
+        { key: "nodeTotal",   headerName: "Node Total"  , total: 0, unit : ""     }, { key: "masterTotal", headerName: "Master Total", total: 0, "unit": ""                   },
+        { key: "workerTotal", headerName: "Worker Total", total: 0, unit : ""     }, { key: "podTotal",    headerName: "Pod Total",    total: 0, "unit": ""                   }, 
         { key: "cpuTotal",    headerName: "CPU Total"   , total: 0, unit : "core" }, { key: "memoryTotal", headerName: "Memory Total", total: 0, "unit": utilConst["UNIT_GI"] }
     ] 
 
@@ -69,5 +69,5 @@ const gridDataMaker = data => {
 
 export {
     totalMaker,
-    gridDataMaker
+    gridDataMaker,
 }

@@ -1,7 +1,6 @@
 const { DataGrid } = require("@mui/x-data-grid")
 
 const MakeDataGrid = props => {
-    console.log(props.rows)
     return(
         <DataGrid 
             rows = { props.rows}
