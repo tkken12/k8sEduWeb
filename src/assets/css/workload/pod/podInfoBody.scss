@@ -1,0 +1,29 @@
+.pod-container{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "table graph";
+
+    grid-template-columns:  1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    height: 100%;
+    padding: 1rem;
+    grid-gap: 10px;
+}
+
+.pod-area-header {
+    grid-area: header;
+}
+
+.pod-area-table {
+    grid-area: table;
+}
+
+.pod-area-graph {
+    grid-area: graph;
+}
+
+.pod-graph-container {
+    display: grid
+    
+}
