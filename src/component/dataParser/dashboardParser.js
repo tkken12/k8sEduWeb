@@ -47,6 +47,10 @@ const gridDataMaker = data => {
     
     let newDatas = []
 
+    if( !!data !== true ) {
+        return []
+    }
+
     data.forEach( (elem, idx) => {
         let rowsBody = {
             id             : idx + 1,
@@ -67,7 +71,38 @@ const gridDataMaker = data => {
     return newDatas
 }
 
+const conditionDataMaker = data => {
+
+    let body = [
+        { "id": "nodeReady",          "headerName": "정상 가동률",          "data": "0%"  },
+        { "id": "memoryPressure",     "headerName": "MemoryPressure",     "data": "0%"   },
+        { "id": "pidPressure",        "headerName": "PIDPressure",        "data": "0%"   },
+        { "id": "diskPressure",       "headerName": "DiskPressure",       "data": "0%"   },
+        { "id": "networkUnavailable", "headerName": "NetworkUnavailable", "data": "0%"   },
+    ];
+
+    if( !!data !== true ) { return body; };
+
+    for( let key in data["nodeCondition"]) {
+        let targetNode = 0;
+        data["nodeCondition"][key].forEach( elem => {
+            if(elem["pressure"]) {
+                targetNode++
+            };
+        });
+
+        body.forEach(bodyElem => {
+            if( bodyElem["id"] === key ) {
+                bodyElem["data"] = `${(targetNode / data["nodeCondition"][key].length) * 100}%`
+            };
+        });
+    };
+
+    return body;
+} 
+
 export {
     totalMaker,
     gridDataMaker,
+    conditionDataMaker
 }

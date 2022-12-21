@@ -1,19 +1,13 @@
 import { Card, CardContent, CardHeader, Typography } from "@mui/material"
+import { conditionDataMaker } from "component/dataParser/dashboardParser"
+import { useStore } from "component/global/zustand"
 
 const ConditionContainer = props => {
 
-    let conditionBodyOjb = [
-        {"headerName": "정상 가동률", "data": "100%"},
-        {"headerName": "MemoryPresure", "data": "N/A"},
-        {"headerName": "PIDPresure", "data": "N/A"},
-        {"headerName": "DiskPresure", "data": "N/A"},
-        {"headerName": "Condition", "data": "N/A"},
-        {"headerName": "NetworkUnavailable", "data": "N/A"},
-    ]
-
+    const { dashboardInfo } = useStore()
     return (
         <div className="condition-container">
-            {conditionBodyOjb.map(body => (
+            { conditionDataMaker(dashboardInfo["message"]["nodeInfo"]).map(body => (
                 <div className="condition-item"> 
                 <Card >
                     <CardHeader
@@ -25,7 +19,7 @@ const ConditionContainer = props => {
                     <CardContent
                         sx={{ textAlign:"center"}}
                     >
-                        <div> { body["data"]} </div>
+                        <div className="card-font"> { body["data"]} </div>
                     </CardContent>
                 </Card>
                 </div>

@@ -15,7 +15,6 @@
 
 .body-area-content {
     grid-area: content;
-    overflow-y: scroll;
 }
 
 .resource-container {
@@ -41,4 +40,9 @@
     text-align: center;
     font-weight: bold;
     font-size: 15pt;
+}
+
+.card-font {
+    font-size: 150%;
+    font-weight: "bold";
 }

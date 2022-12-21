@@ -4,7 +4,7 @@ import { Card, CardContent } from "@mui/material"
 import { DASHBOARD_STYLE } from "assets/css/dashboard/style"
 import { useStore } from "component/global/zustand"
 
-const NodeGrid = props => {
+const NodeGrid = () => {
 
     const { dashboardInfo } = useStore()
     const utilizations = id => {

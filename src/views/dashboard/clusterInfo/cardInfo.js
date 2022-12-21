@@ -18,6 +18,7 @@ const ClusterCardInfo = () => {
                     />
                     <CardContent
                         sx={{ textAlign:"center"}}
+                        className="card-font"
                     >
                         {  `${obj["total"]} ${obj["unit"]}` }
                     </CardContent>

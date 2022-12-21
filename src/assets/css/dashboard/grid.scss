@@ -89,13 +89,20 @@
 
 .node-area-cpu {
     grid-area: cpu;
+    display: contents;
+    overflow-y: scroll;
 }
 .node-area-memory {
     grid-area: memory;
+    display: contents;
+    overflow-y: scroll;
 }
 .node-area-disk {
     grid-area: disk;
+    display: contents;
+    overflow-y: scroll;
 }
 .node-area-condition {
     grid-area: condition;
+    display: contents;
 }
