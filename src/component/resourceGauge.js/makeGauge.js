@@ -15,7 +15,7 @@ const MakeGauge = props => {
     }
 
 
-    return <ProgressBar variant={getCurrentState()} label={`${props.utilization}%`} now={props.utilization} />
+    return <ProgressBar style={{borderRadius:"1px"}} variant={getCurrentState()} label={`${props.utilization}%`} now={props.utilization} />
 }
 
 export default MakeGauge
