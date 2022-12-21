@@ -1,5 +1,5 @@
 import { Route, Switch } from "react-router-dom"
-import routePath from "route/routPath"
+import routePath from "route/routePath"
 import "assets/css/layout.scss"
 import "./App.scss"
 import Sidebar from "component/sidebar/sidebar"

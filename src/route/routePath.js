@@ -1,6 +1,6 @@
 import Dashboard from "views/dashboard/dashboard"
 import NodeMonitoringBody from "views/monitoring/node/nodeMonitoringBody"
-import PodInfo from "views/podInfo/podInfo"
+import PodInfo from "views/podInfo/podInfoBody"
 
 const routePath = [
     {

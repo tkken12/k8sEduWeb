@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import "assets/css/sidebar/font.scss"
-import routePath from "route/routPath"
+import routePath from "route/routePath"
 import { Link } from "react-router-dom"
 import { useHistory } from "react-router-dom/cjs/react-router-dom"
 
